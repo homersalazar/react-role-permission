@@ -72,3 +72,14 @@ exports.getUser = function (req, res) {
     });
   });
 };
+
+exports.getAllUser = function (req, res) {
+  User.getAllUsers(function (err, results) {
+    if (err) {
+      return res
+        .status(500)
+        .json({ error: "Database query error", details: err });
+    }
+    return res.status(200).json(results.length > 0 ? results : []);
+  });
+};

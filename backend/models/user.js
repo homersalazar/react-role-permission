@@ -14,3 +14,11 @@ exports.getUser = function (email, callback) {
     }
   );
 };
+
+exports.getAllUsers = function (callback) {
+  // Fixed function name
+  db.query("SELECT * FROM users", function (err, results) {
+    if (err) return callback(err);
+    return callback(null, results);
+  });
+};
