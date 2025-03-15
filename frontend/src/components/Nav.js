@@ -2,7 +2,7 @@ import React from "react";
 
 const Nav = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 shadow-md">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -29,10 +29,10 @@ const Nav = () => {
               <a href="/home">Users</a>
             </li>
             <li>
-              <a>Portfolio</a>
+              <a href="/role">Role</a>
             </li>
             <li>
-              <a>About</a>
+              <a>Permission</a>
             </li>
           </ul>
         </div>

@@ -8,7 +8,7 @@ const Home = () => {
 
   const fetchUser = async () => {
     try {
-      const response = await axios.get("http://localhost:3002/user/users"); // Correct endpoint
+      const response = await axios.get("http://localhost:3002/user/users");
       setUser(response.data);
     } catch (error) {
       console.log(error);
@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <>
       <Nav />
-      <div className="flex flex-col gap-5 w-full overflow-x-auto px-5">
+      <div className="flex flex-col gap-5 w-full overflow-x-auto p-5">
         <button className="btn btn-sm w-48 ml-auto">Create user</button>
         <table className="table">
           <thead>
